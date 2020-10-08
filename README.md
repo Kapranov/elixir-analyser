@@ -1,5 +1,10 @@
 # ElixirAnalyser
 
+---
+
+This is a prototype Elixir application to follow the specification of
+the Exercism.io automated mentor support project.
+
 **TODO: Add description**
 
 `ElixirAnalyzer` at this point will run static analysis. The result json
