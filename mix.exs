@@ -8,7 +8,8 @@ defmodule ElixirAnalyser.MixProject do
       elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      escript: escript()
     ]
   end
 
@@ -19,11 +20,13 @@ defmodule ElixirAnalyser.MixProject do
   end
 
   defp deps do
-    [
-      {:jason, "~> 1.2"}
-    ]
+    [{:jason, "~> 1.2"}]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
   defp elixirc_paths(_), do: ["lib"]
+
+  defp escript do
+    [main_module: ElixirAnalyzer.CLI]
+  end
 end
