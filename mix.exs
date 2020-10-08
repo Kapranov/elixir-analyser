@@ -20,7 +20,10 @@ defmodule ElixirAnalyser.MixProject do
   end
 
   defp deps do
-    [{:jason, "~> 1.2"}]
+    [
+      {:ex_unit_notifier, "~> 0.1", only: [:test]},
+      {:jason, "~> 1.2"}
+    ]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
